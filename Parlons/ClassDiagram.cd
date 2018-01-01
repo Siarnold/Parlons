@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Parlons.FormLogIn" Collapsed="true">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAIAAACCAAAAAACDCAgAQCAAABEAAACQAgAgEUAAA=</HashCode>
+      <FileName>FormLogIn.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Parlons.FormParlons" Collapsed="true">
+    <Position X="4.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>cAEECgCAICUIEACAASGKACgDBAxpBIyCyFogGgIVAIA=</HashCode>
+      <FileName>FormParlons.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Parlons.P2PConnection" Collapsed="true">
+    <Position X="1.5" Y="2" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAADAAgAAEYAAAEAAAAAIAAAAAgAEAAAAACAGBg=</HashCode>
+      <FileName>P2PConnection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Parlons.Program" Collapsed="true">
+    <Position X="1.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Parlons.ServerConnection" Collapsed="true">
+    <Position X="1.5" Y="1.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAASAAAAAAAAAgAAAABAA=</HashCode>
+      <FileName>ServerConnection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Parlons.UserControlEmoji" Collapsed="true">
+    <Position X="4.75" Y="3.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAQgACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UserControlEmoji.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Parlons.UserControlFriend" Collapsed="true">
+    <Position X="3.75" Y="1.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAIACAKgAAADIGAAAACgAAAAAAAGAAAAAAAAAA=</HashCode>
+      <FileName>UserControlFriend.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Parlons.UserControlGroup" Collapsed="true">
+    <Position X="5.5" Y="1.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAgAQAAACAKBAAABIWQgAACgAAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>UserControlGroup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Parlons.UserControlReceiveImage" Collapsed="true">
+    <Position X="5.5" Y="4" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAACAAAAAEAACAEAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UserControlReceiveImage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Parlons.UserControlReceiveSession" Collapsed="true">
+    <Position X="5.5" Y="2.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAABACAEAACAAAAAAAACAAAAABAAAA=</HashCode>
+      <FileName>UserControlReceiveSession.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Parlons.UserControlSendImage" Collapsed="true">
+    <Position X="3.5" Y="4" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAACAAAAAEAACAEAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UserControlSendImage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Parlons.UserControlSendSession" Collapsed="true">
+    <Position X="3.5" Y="2.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAACAAAAAABACAEAACAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>UserControlSendSession.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Parlons.Properties.Resources" Collapsed="true">
+    <Position X="7.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QABAAAAAAAAwAAACEAABEAAAAQEAAAAAACAAAACIBIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Parlons.Properties.Settings" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Microsoft YaHei UI" Size="9" />
+</ClassDiagram>

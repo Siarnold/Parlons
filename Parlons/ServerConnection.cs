@@ -36,7 +36,7 @@ namespace Parlons
             }
             catch (SocketException se)
             {
-                MessageBox.Show(se.Message);
+                MessageBox.Show(se.Message, "温馨提示");
                 return resultStr;
             }
 
@@ -49,13 +49,13 @@ namespace Parlons
             }
             catch (SocketException se)
             {
-                MessageBox.Show(se.Message);
+                MessageBox.Show(se.Message, "温馨提示");
                 serverSocket.Close();
                 return resultStr;
             }
             catch (Exception e)
             {
-                MessageBox.Show(e.Message);
+                MessageBox.Show(e.Message, "温馨提示");
                 serverSocket.Close();
                 return resultStr;
             }

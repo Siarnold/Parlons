@@ -10,12 +10,17 @@ using System.Windows.Forms;
 
 namespace Parlons
 {
-    public partial class UserControlSession : UserControl
+    public partial class UserControlSendImage : UserControl
     {
-        public UserControlSession(string session)
+        public UserControlSendImage(Image image, string session = "")
         {
             InitializeComponent();
             labelSession.Text = session;
+            pictureBoxImage.Image = image;
+            if (session == "")
+            {
+                labelSession.BackColor = System.Drawing.SystemColors.Control;
+            }
         }
     }
 }

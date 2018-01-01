@@ -10,25 +10,70 @@ using System.Windows.Forms;
 
 namespace Parlons
 {
-    public partial class UserControlFriend : UserControl
+    public partial class UserControlGroup : UserControl
     {
         static int count = 0;
         public FlowLayoutPanel flowLayoutPanelSession;
         public TextBox textBoxSession;
-        public string userID; // the student ID
-        public int orderID; // the order ID is 0, 1, 2 ...
-
-        public UserControlFriend(string uID)
+        public List<string> userIDs; // the student ID
+        public int groupOrderID; // the order ID is 0, 1, 2 ...
+        public string groupID; // the identifier of a group 
+        public string groupName;
+        
+        public UserControlGroup(List<string> uIDs, string gName)
         {
             InitializeComponent();
+            userIDs = uIDs;
 
             // get an order ID
-            orderID = count;
+            groupOrderID = count;
             count++;
 
-            userID = uID;
-            labelUserID.Text = userID;
+            // generate group ID
+            groupID = userIDs[0];
+            for (int i = 1; i < userIDs.Count(); i++)
+            {
+                groupID += userIDs[i];
+            }
 
+            groupName = gName;
+            labelGroupName.Text = groupName;
+
+            UISetUp();
+            HighlightCurrent();
+        }
+
+        public UserControlGroup(string gID, string gName)
+        {
+            InitializeComponent();
+            if (gID.Length < 10 && gID.Length % 10 != 0)
+            {
+                MessageBox.Show("您的群组ID非法哦！");
+                return;
+            }
+            groupID = gID;
+
+            FormParlons.PARLONS.isGroup = true;
+            // get an order ID
+            groupOrderID = count;
+            count++;
+
+            int N = groupID.Length / 10;
+            userIDs = new List<string>(N);
+            for (int i = 0; i < N; i++)
+            {
+                // add to the list
+                userIDs.Add(groupID.Substring(10 * i, 10));
+            }
+            groupName = gName;
+            labelGroupName.Text = groupName;
+
+            UISetUp();
+            HighlightCurrent();
+        }
+
+        public void UISetUp()
+        {
             // the message history
             flowLayoutPanelSession = new FlowLayoutPanel();
             flowLayoutPanelSession.Parent = FormParlons.PARLONS;
@@ -52,19 +97,6 @@ namespace Parlons
             textBoxSession.BorderStyle = System.Windows.Forms.BorderStyle.None;
             textBoxSession.KeyPress += new KeyPressEventHandler(textBoxSession_KeyPress);
 
-            string queryStr = "q" + userID;
-            string queryIPStr = FormParlons.PARLONS.serverConnection.ServerQuery(queryStr);
-            if (queryIPStr == "n")
-            {
-                labelStatus.Text = "离线";
-            }
-
-            HighlightCurrent();
-        }
-
-        private void UserControlFriend_MouseClick(object sender, MouseEventArgs e)
-        {
-            HighlightCurrent();
         }
 
         public void HighlightCurrent()
@@ -76,40 +108,34 @@ namespace Parlons
                 {
                     FormParlons.PARLONS.groups[FormParlons.PARLONS.currGroupOrderID].BackColor = System.Drawing.SystemColors.Control;
                 }
-                FormParlons.PARLONS.isGroup = false;
             }
             else
             {
                 if (FormParlons.PARLONS.currOrderID > -1)
                 {
                     FormParlons.PARLONS.friends[FormParlons.PARLONS.currOrderID].BackColor = System.Drawing.SystemColors.Control;
-
-                    // hide the last friend labelStatus
-                    FormParlons.PARLONS.friends[FormParlons.PARLONS.currOrderID].labelStatus.Text = "";
                 }
+                FormParlons.PARLONS.isGroup = true;
             }
 
             // set this panel to be dark
             this.BackColor = System.Drawing.SystemColors.ControlDark;
 
-            // set the orderID for Parlons
-            FormParlons.PARLONS.currOrderID = orderID;
-
-            // renew the current state
-            string queryStr = "q" + userID;
-            string queryIPStr = FormParlons.PARLONS.serverConnection.ServerQuery(queryStr);
-            if (queryIPStr == "n")
-            {
-                labelStatus.Text = "离线";
-            }
-            else
-            {
-                labelStatus.Text = "在线";
-            }
-
+            // bring to front the controls
             flowLayoutPanelSession.BringToFront();
             textBoxSession.BringToFront();
             FormParlons.PARLONS.buttonSend.BringToFront();
+            FormParlons.PARLONS.isGroup = true;
+
+            // set the orderID for Parlons
+            FormParlons.PARLONS.currGroupOrderID = groupOrderID;
+            
+
+        }
+
+        private void UserControlGroup_MouseClick(object sender, MouseEventArgs e)
+        {
+            HighlightCurrent();
         }
 
         private void flowLayoutPanelSession_Click(object sender, EventArgs e)
@@ -127,6 +153,5 @@ namespace Parlons
                     FormParlons.PARLONS.SendToFriend();
             }
         }
-
     }
 }

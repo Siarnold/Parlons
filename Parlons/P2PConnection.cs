@@ -14,16 +14,15 @@ namespace Parlons
     {
         IPAddress listenIP, peerIP;
         EndPoint listenEndPoint, peerEndPoint;
-        Socket listenSocket, receiveSocket, peerSocket;
+        public Socket listenSocket, receiveSocket, peerSocket;
         int port = 50766;
         int backlog = 10;
-        Byte[] receiveByte;
-        public static bool listening = false;
-        public static bool newMessage = false;
-        public static int length;
-        public static string receiveStr = "0";
-        public static IPEndPoint remoteEndPoint;
-        public static IPAddress remoteIP;
+        byte[] receiveByte = new byte[1024 * 1024];
+        public byte[] receiveBuffer = new byte[1024 * 1024 * 15];
+        public int receiveLength;
+        public IPEndPoint remoteEndPoint;
+        public IPAddress remoteIP;
+        public bool newMessage = false;
 
         public P2PConnection(string myIPString)
         {
@@ -45,7 +44,7 @@ namespace Parlons
             }
             catch (SocketException se)
             {
-                MessageBox.Show(se.Message);
+                MessageBox.Show(se.Message, "温馨提示");
                 return;
             }
 
@@ -84,22 +83,37 @@ namespace Parlons
             }
             catch (SocketException se)
             {
-                MessageBox.Show(se.Message);
-                listening = false;
+                MessageBox.Show(se.Message, "温馨提示");
                 return;
             }
 
             listenSocket.Listen(backlog);
 
-            while (listening)
+            while (true)
             {
+                int length;
+                
                 receiveSocket = listenSocket.Accept();
-                receiveByte = new Byte[1024];
                 length = receiveSocket.Receive(receiveByte);
-                receiveStr = System.Text.Encoding.UTF8.GetString(receiveByte, 0, length);
-                remoteEndPoint = (IPEndPoint) receiveSocket.RemoteEndPoint;
+                receiveLength = 0;
+                Array.Copy(receiveByte, 0, receiveBuffer, receiveLength, length);
+                receiveLength += length;
+
+                remoteEndPoint = (IPEndPoint)receiveSocket.RemoteEndPoint;
                 remoteIP = remoteEndPoint.Address;
 
+                while (length > 0)
+                {
+                    length  = receiveSocket.Receive(receiveByte);
+                    Array.Copy(receiveByte, 0, receiveBuffer, receiveLength, length);
+                    receiveLength += length;
+                }
+
+                // 1 byte of 0 is defined as the terminating signal
+                if (receiveLength == 1 && receiveBuffer[0] == 0)
+                    break;
+
+                receiveSocket.Close();
                 // set flag to remind the FormParlons
                 newMessage = true;
             }
