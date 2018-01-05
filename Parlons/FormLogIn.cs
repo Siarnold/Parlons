@@ -22,6 +22,8 @@ namespace Parlons
         {
             InitializeComponent();
             FORMLOGIN = this;
+            pictureBoxMin.Parent = pictureBoxBackground;
+            pictureBoxClose.Parent = pictureBoxBackground;
             serverConnection = new ServerConnection();
         }
 
@@ -61,15 +63,15 @@ namespace Parlons
             }
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            Application.Exit();
-        }
-
         private void pictureBoxMin_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void pictureBoxClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Application.Exit();
         }
 
 

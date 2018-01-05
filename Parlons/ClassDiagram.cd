@@ -1,14 +1,29 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="Parlons.FormLogIn" Collapsed="true">
-    <Position X="3" Y="0.5" Width="1.5" />
+    <Position X="3.25" Y="0.5" Width="1.25" />
     <TypeIdentifier>
-      <HashCode>AAgAIAAACCAAAAAACDCAgAQCAAABEAAACQAgAgEUAAA=</HashCode>
+      <HashCode>AAgAAAAACCAAAAAACDCAgAQCAAABEAAACQAgEgEUAAA=</HashCode>
       <FileName>FormLogIn.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Parlons.FormParlons" Collapsed="true">
-    <Position X="4.5" Y="0.5" Width="1.5" />
+    <Position X="4.5" Y="0.5" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="Parlons.FormParlons.MessageType" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>FormParlons.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Delegate Name="Parlons.FormParlons.ProcessNewMessageDelegate" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>FormParlons.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
     <TypeIdentifier>
       <HashCode>cAEECgCAICUIEACAASGKACgDBAxpBIyCyFogGgIVAIA=</HashCode>
       <FileName>FormParlons.cs</FileName>
@@ -36,14 +51,14 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Parlons.UserControlEmoji" Collapsed="true">
-    <Position X="4.75" Y="3.25" Width="1.75" />
+    <Position X="4.5" Y="3.25" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAACAAAAAQgACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>UserControlEmoji.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Parlons.UserControlFriend" Collapsed="true">
-    <Position X="3.75" Y="1.5" Width="1.75" />
+    <Position X="3.5" Y="1.5" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAgAAAIACAKgAAADIGAAAACgAAAAAAAGAAAAAAAAAA=</HashCode>
       <FileName>UserControlFriend.cs</FileName>

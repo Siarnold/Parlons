@@ -136,7 +136,7 @@
     <EmbeddedResource Include="UserControlSendSession.resx">
       <DependentUpon>UserControlSendSession.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="ClassDiagramParlons.cd" />
+    <None Include="ClassDiagram.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

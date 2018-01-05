@@ -55,11 +55,11 @@
             // 
             this.labelUserID.AutoSize = true;
             this.labelUserID.BackColor = System.Drawing.SystemColors.Highlight;
-            this.labelUserID.Font = new System.Drawing.Font("方正清刻本悦宋简体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelUserID.Location = new System.Drawing.Point(113, 96);
+            this.labelUserID.Font = new System.Drawing.Font("Georgia", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelUserID.Location = new System.Drawing.Point(114, 95);
             this.labelUserID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelUserID.Name = "labelUserID";
-            this.labelUserID.Size = new System.Drawing.Size(47, 20);
+            this.labelUserID.Size = new System.Drawing.Size(50, 23);
             this.labelUserID.TabIndex = 4;
             this.labelUserID.Text = "账号";
             // 
@@ -67,11 +67,11 @@
             // 
             this.labelPassword.AutoSize = true;
             this.labelPassword.BackColor = System.Drawing.SystemColors.Highlight;
-            this.labelPassword.Font = new System.Drawing.Font("方正清刻本悦宋简体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelPassword.Location = new System.Drawing.Point(113, 143);
+            this.labelPassword.Font = new System.Drawing.Font("Georgia", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPassword.Location = new System.Drawing.Point(114, 141);
             this.labelPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelPassword.Name = "labelPassword";
-            this.labelPassword.Size = new System.Drawing.Size(47, 20);
+            this.labelPassword.Size = new System.Drawing.Size(50, 23);
             this.labelPassword.TabIndex = 5;
             this.labelPassword.Text = "密码";
             // 
@@ -88,7 +88,7 @@
             // 
             // buttonLogIn
             // 
-            this.buttonLogIn.Font = new System.Drawing.Font("方正清刻本悦宋简体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.buttonLogIn.Font = new System.Drawing.Font("Georgia", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonLogIn.Location = new System.Drawing.Point(199, 213);
             this.buttonLogIn.Name = "buttonLogIn";
             this.buttonLogIn.Size = new System.Drawing.Size(80, 39);
@@ -99,6 +99,7 @@
             // 
             // pictureBoxMin
             // 
+            this.pictureBoxMin.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxMin.Image = global::Parlons.Properties.Resources.min;
             this.pictureBoxMin.Location = new System.Drawing.Point(440, -1);
             this.pictureBoxMin.Name = "pictureBoxMin";
@@ -110,6 +111,7 @@
             // 
             // pictureBoxClose
             // 
+            this.pictureBoxClose.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxClose.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxClose.Image")));
             this.pictureBoxClose.Location = new System.Drawing.Point(468, -1);
             this.pictureBoxClose.Name = "pictureBoxClose";
@@ -117,7 +119,7 @@
             this.pictureBoxClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxClose.TabIndex = 11;
             this.pictureBoxClose.TabStop = false;
-            this.pictureBoxClose.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pictureBoxClose.Click += new System.EventHandler(this.pictureBoxClose_Click);
             // 
             // pictureBoxBackground
             // 

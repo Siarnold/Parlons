@@ -12,7 +12,7 @@ namespace Parlons
 {
     public partial class UserControlFriend : UserControl
     {
-        static int count = 0;
+        public static int count = 0;
         public FlowLayoutPanel flowLayoutPanelSession;
         public TextBox textBoxSession;
         public string userID; // the student ID

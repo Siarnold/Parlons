@@ -103,9 +103,8 @@ namespace Parlons
          * The events relevent to the close of the window
          ********************************************************/
 
-        private void buttonClose_Click(object sender, EventArgs e)
+        private void buttonChangeUser_Click(object sender, EventArgs e)
         {
-
             // stop listening
             StopListening();
             while (threadListening.IsAlive) ;
@@ -117,9 +116,9 @@ namespace Parlons
             MessageBox.Show("您已经下线了哦！", "温馨提示");
 
             this.Close();
+            UserControlFriend.count = 0;
+            UserControlGroup.count = 0;
             FormLogIn.FORMLOGIN.Show();
-            
-
         }
 
         private void pictureBoxClose_Click(object sender, EventArgs e)

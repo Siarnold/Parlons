@@ -78,7 +78,7 @@
             // 
             // buttonQuery
             // 
-            this.buttonQuery.Font = new System.Drawing.Font("方正清刻本悦宋简体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.buttonQuery.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonQuery.Location = new System.Drawing.Point(196, 16);
             this.buttonQuery.Name = "buttonQuery";
             this.buttonQuery.Size = new System.Drawing.Size(82, 37);
@@ -89,18 +89,18 @@
             // 
             // buttonChangeUser
             // 
-            this.buttonChangeUser.Font = new System.Drawing.Font("方正清刻本悦宋简体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.buttonChangeUser.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonChangeUser.Location = new System.Drawing.Point(937, 511);
             this.buttonChangeUser.Name = "buttonChangeUser";
             this.buttonChangeUser.Size = new System.Drawing.Size(86, 37);
             this.buttonChangeUser.TabIndex = 8;
             this.buttonChangeUser.Text = "切换账号";
             this.buttonChangeUser.UseVisualStyleBackColor = true;
-            this.buttonChangeUser.Click += new System.EventHandler(this.buttonClose_Click);
+            this.buttonChangeUser.Click += new System.EventHandler(this.buttonChangeUser_Click);
             // 
             // buttonSend
             // 
-            this.buttonSend.Font = new System.Drawing.Font("方正清刻本悦宋简体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.buttonSend.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSend.Location = new System.Drawing.Point(951, 662);
             this.buttonSend.Name = "buttonSend";
             this.buttonSend.Size = new System.Drawing.Size(72, 36);
