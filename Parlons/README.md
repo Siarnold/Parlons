@@ -1,8 +1,8 @@
 # Parlons
 
-> A central server-based P2P chatting system
+> A central server-based P2P chatting system  
 > As the big assignment for the course of Computer Networks and Applications in 2017 Fall, Tsinghua University  
-> 'Parlons' is French, meaning 'Let's Talk'
+> 'Parlons' is French, meaning 'Let's Talk'  
 > Siarnold, 2017 - 2018  
 > Contact: siarnold@foxmail.com  
 
@@ -16,7 +16,9 @@
 * 使用C#语言完成
 * 编写、调试环境为Visual Studio 2012
 * 运行需要安装Microsoft .NET Framework 4.0
-* 请将可执行文件Parlons.exe与Emoji文件夹置于相同路径下
+* Emoji路径修改在FormParlons第37行EmojiDirectory中可设置
+* Release时将此路径设为当前目录".\Emoji"，故请将可执行文件Parlons.exe与Emoji文件夹置于相同路径下
+* 工程文件设置Emoji路径为Resources文件夹，故工程可直接运行
 
 ## 各文件功能
 

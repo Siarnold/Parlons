@@ -33,9 +33,12 @@ namespace Parlons
 
         // text, file
         public enum MessageType { TEXT, FILE };
-
+        // Emoji Directory
+        // string EmojiDirectory = @".\Emoji";
+        string EmojiDirectory = @"..\..\Resources";
+        
         string myUserID;
-        string myIPStr;
+        string myIPStr; 
 
         public FormParlons(ServerConnection sC)
         {
@@ -728,13 +731,14 @@ namespace Parlons
             }
         }
 
+        // Add Emoji to the list
         public void AddEmoji()
         {
             Image emoji;
             UserControlEmoji userControlEmoji;
             FileStream fileStream;
             int count = 0, width = 0, height = -28;
-            var emojiFiles = Directory.GetFiles(@".\Emoji", "*.png");
+            var emojiFiles = Directory.GetFiles(EmojiDirectory, "*.png");
             foreach (var emojiFile in emojiFiles)
             {
                 if (count % 12 == 0)
